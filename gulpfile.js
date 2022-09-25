@@ -7,6 +7,7 @@ const cleanCSS    = require('gulp-clean-css');
 const imagemin    = require('gulp-imagemin');
 const htmlmin     = require('gulp-htmlmin');
 const svgSprite = require('gulp-svg-sprite');
+const fileinclude = require('gulp-file-include');
 // const imageminWebp = require('imagemin-webp');
 // const imageminw = require('imagemin');
 // const webp = require('gulp-webp');
@@ -132,6 +133,13 @@ gulp.task(`svgSprite`, function(){
 //         .pipe(webp())
 //         .pipe(gulp.dest('dist/img'))
 // });
+gulp.task('fileinclude', function() {
+    gulp.src(['src/index.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./dist'));
+  });
 
-
-gulp.task('default', gulp.parallel('watch','server','styles',`scripts`,`fonts`,`icons`,`html`,`mailer`,`images`,`svgSprite`));
+gulp.task('default', gulp.parallel('watch','server','fileinclude','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));

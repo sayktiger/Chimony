@@ -21,6 +21,10 @@ img{
     width: 100%;
 }
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 //Блоки
 @import "blocks/header";
 @import "blocks/menu";
