@@ -21,9 +21,9 @@
     }
     &__all{
         display: block;
-        width: 202px;
+        width: 200px;
         height: 40px;
-        padding: 9px 83px 9px 51px;
+        padding: 9px 0 9px 51px;
         font-family: 'Gilroy';
         font-style: normal;
         font-weight: 400;
@@ -36,8 +36,9 @@
         border: 1px solid #5F49EA;
         border-radius: 8px;
         position: relative;
+        cursor: pointer;
         &::before{
-            content: url('../img/svg/keys-arrow.svg');
+            content: url('../img/svg/arrow-up.svg');
             position: absolute;
             top:8px;
             right: 58px;
