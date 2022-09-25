@@ -4,6 +4,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         loop: true,
         pagination: {
           el: '.keys__swiper-pagination',
+          clickable: true
         },
         navigation: {
           nextEl: '.keys__swiper-button-next',
@@ -26,6 +27,7 @@ document.addEventListener(`DOMContentLoaded`, () => {
         loop: true,
         pagination: {
           el: '.news__swiper-pagination',
+          clickable: true
         },
         navigation: {
           nextEl: '.news__swiper-button-next',
@@ -42,4 +44,21 @@ document.addEventListener(`DOMContentLoaded`, () => {
           disableOnInteraction: false,
       }
       });
+
+      //Меню
+      const body = document.querySelector(`body`),
+          menu = document.querySelector(`.menu`),
+          burger = document.querySelector(`.header__mobile_burger`);
+        
+      
+      burger.addEventListener(`click`, (e) =>{
+
+
+        body.classList.toggle(`overflow`);
+        menu.classList.toggle(`menu__active`);
+        burger.classList.toggle(`header__mobile_burger_active`);
+      });
+
+      
+      
 });

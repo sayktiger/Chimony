@@ -1,5 +1,18 @@
 .header{
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    &__mobile{
+        &_search{
+            display: none;
+        }
+        &_burger{
+            display: none;
+        }
+    }
     &__wrapper{
         padding: 28px 0;
         max-width: 100%;

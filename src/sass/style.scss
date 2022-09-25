@@ -26,6 +26,10 @@ a{
     transition: all 0.3s;
 }
 
+.overflow{
+    overflow: hidden;
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -37,6 +41,6 @@ a{
 @import "blocks/news";
 // Адаптив
 @import "media/media-1200px";
-@import "media/media-992px";
+@import "media/media-1024px";
 @import "media/media-768px";
 @import "media/media-768px";

@@ -1,0 +1,51 @@
+@media (max-width:1200px) {
+    .container{
+        max-width: 992px;
+    }
+    .header{
+        &__contacts{
+            flex-direction: column;
+            width: auto;
+        }
+        &__phone{
+            &::before{
+                top: 15px;
+            }
+        }
+        &__list{
+            width: 405px;
+        }
+
+        &__search{
+            input{
+                width: 110px;
+            }
+        }
+    }
+
+    .keys{
+        &__swiper{
+            &__descr{
+                line-height: 18px;
+                margin-bottom: 20px;
+            }
+            &__logo{
+                margin-bottom: 12px;
+            }
+        }
+        &__title{
+            margin-bottom: 10px;
+        }
+    }
+
+    .news{
+        &__text{
+            margin-right: 40px;
+        }
+        &__swiper{
+            &__subtitle{
+                max-width: 300px;
+            }
+        }
+    }
+}

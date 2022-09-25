@@ -1,0 +1,210 @@
+.menu{
+    background: #5F49EA;
+    padding: 80px 0 128px 0;
+    display: none;
+    position: fixed;
+    top:-150%;
+    left:0;
+    right: 0;
+    z-index: -2;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    height: 100%;
+    margin-top: 70px;
+    &__active{
+        transition: all 0.3s;
+        display: block;
+        top:0;
+        z-index: 9;
+        &::-webkit-scrollbar {
+            width: 100%;
+            opacity: 0;
+          }
+    }
+    &__scroll{
+        transition: all 0.3s;
+    }
+    &__scrollY{
+        transition: all 0.3s;
+    }
+    
+    .container{
+        max-width: 548px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 330px;
+        margin-bottom: 60px;
+    }
+
+    &__item{
+        list-style: none;
+        a{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+    
+
+    &__contacts{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 548px;
+        margin-bottom: 38px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        opacity: 0.5;
+        margin-bottom: 16px;
+    }
+
+    &__tel{
+        padding-left: 24px;
+        margin-bottom: 16px;
+        position: relative;
+        a{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+        &::before{
+            content: url("../img/svg/menu-phone.svg");
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+    }
+
+    &__email{
+        padding-left: 24px;
+        position: relative;
+        a{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            color: #FFFFFF;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+        &::before{
+            content: url("../img/svg/menu-email.svg");
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+    }
+
+    &__social{
+        &_wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 196px;
+        }
+        &_icon{
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: 100%;
+            transition: all 0.3s;
+            &:nth-child(1){
+                padding: 10px 10px 11px 11px;
+                svg{
+                    width: 19px;
+                    height: 19px;
+                    fill:#5F49EA;
+                }
+            }
+            &:nth-child(2){
+                padding: 13px 12px 12px 13px;
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    fill:#5F49EA;
+                }
+            }
+            &:nth-child(3){
+                padding: 11px;
+                svg{
+                    width: 19px;
+                    height: 19px;
+                    fill:#5F49EA;
+                }
+            }
+            &:nth-child(4){
+                padding: 13px 12px 12px 11px;
+                svg{
+                    width: 18px;
+                    height: 16px;
+                    fill:#5F49EA;
+                }
+            }
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__block{
+        padding-left: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &_adress{
+            max-width: 300px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FFFFFF;
+            position: relative;
+            &::before{
+                content: url("../img/svg/menu-map.svg");
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 3px;
+                left: -22px;
+            }
+        }
+    }
+}
