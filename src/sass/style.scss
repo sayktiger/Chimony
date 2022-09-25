@@ -1,0 +1,33 @@
+//Переменные и миксины
+@import "variable/variable";
+
+//Библиотеки
+@import "libs/normalize";
+@import "libs/swiper-bundle.min";
+
+//Шрифты
+@import "fonts";
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,ul,li,p{
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+//Блоки
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/keys";
+@import "blocks/news";
+// Адаптив
+@import "media/media-1200px";
+@import "media/media-992px";
+@import "media/media-768px";
+@import "media/media-768px";
