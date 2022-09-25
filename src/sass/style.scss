@@ -21,6 +21,11 @@ img{
     width: 100%;
 }
 
+a{
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;

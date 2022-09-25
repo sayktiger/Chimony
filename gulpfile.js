@@ -81,6 +81,7 @@ gulp.task('watch', function(){
     gulp.watch("src/fonts/**/*").on('all', gulp.parallel('fonts'));
     gulp.watch("src/img/svgIcons/*").on('all', gulp.parallel('icons'));
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
+    gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileinclude`));
 });
 
 gulp.task(`html`,function(){
@@ -139,7 +140,7 @@ gulp.task('fileinclude', function() {
         prefix: '@@',
         basepath: '@file'
       }))
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest('./dist'))
   });
 
 gulp.task('default', gulp.parallel('watch','server','fileinclude','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));

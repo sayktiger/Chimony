@@ -1,0 +1,146 @@
+.header{
+    background-color: #fff;
+    &__wrapper{
+        padding: 28px 0;
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__logo{
+        max-width: 162px;
+        max-height: 24px;
+        a{
+            svg{
+                max-width: 162px;
+                max-height: 24px;
+                fill: #5F49EA;
+                transition: all 0.3s;
+            }
+            &:hover{
+                svg{
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    &__menu{
+        max-width: 484px;
+    }
+    &__list{
+        width: 484px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        list-style: none;
+        a{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            color: #120B3F;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__search{
+        max-width: 230px;
+        background: #fff;
+        position: relative;
+        input, button {
+            outline: none;
+            background: #fff;
+        }
+        input {
+            width: 230px;
+            height: 40px;
+            padding: 12px 0 12px 40px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #120B3F;
+            opacity: 0.5;
+            text-transform: uppercase;
+            background: #FFFFFF;
+            border: 1px solid #D8D8D8;
+            border-radius: 4px;
+        }
+        input:focus {
+            border-color: #120B3F;
+        }
+        button{
+            padding: 0;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 12px;
+            left: 7px;
+            border: none;
+            cursor: pointer;
+            svg{
+                width: 16px;
+                height: 16px;
+                stroke: #5F49EA;
+                fill: transparent;
+            }
+        }
+    }
+
+    &__contacts{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 414px;
+        max-width: 414px;
+    }
+    &__phone{
+        position: relative;
+        a{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            color: #120B3F;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+        &::before{
+            content: url('../img/svg/header-phone.svg');
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 6px;
+            left: -24px;
+        }
+    }
+
+    &__consulting{
+        a {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            color: #5F49EA;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+}
