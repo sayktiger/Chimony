@@ -85,7 +85,7 @@
         &__block{
             order:2;
             max-width: 678px;
-            
+            position: relative;
         }
         &__swiper{
             &__flex{
@@ -103,7 +103,13 @@
                 max-width: 100%;
                 text-align: left;
             }
-            
+            &__logo{
+                position: absolute;
+                top:-15px;
+                right: 0;
+                width: 88px;
+                height: 31px;
+            }
         }
         &__swiper-button-prev{
             position: relative;
@@ -129,6 +135,7 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
             position: relative;
+            column-gap: 30px;
         }
         &__title{
             max-width: 324px;
@@ -148,6 +155,17 @@
                 width: 324px;
                 height: 234px;
             }
+            &__link{
+                margin-bottom: 44px;
+                display: block;
+                width: 175px;
+                height: 22px;
+                &::before{
+                    top: -2px;
+                    right: -20px;
+                }
+            }
         }
+
     }
 }
