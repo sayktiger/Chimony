@@ -48,7 +48,8 @@ document.addEventListener(`DOMContentLoaded`, () => {
       //Меню
       const body = document.querySelector(`body`),
           menu = document.querySelector(`.menu`),
-          burger = document.querySelector(`.header__mobile_burger`);
+          burger = document.querySelector(`.header__mobile_burger`),
+          mobileMenuLink = document.querySelectorAll(`.menu__item a`);
         
       
       burger.addEventListener(`click`, (e) =>{
@@ -59,6 +60,56 @@ document.addEventListener(`DOMContentLoaded`, () => {
         burger.classList.toggle(`header__mobile_burger_active`);
       });
 
+      mobileMenuLink.forEach((item) =>{
+        item.addEventListener(`click`, (e) =>{
+
+          body.classList.remove(`overflow`);
+          menu.classList.remove(`menu__active`);
+          burger.classList.remove(`header__mobile_burger_active`);
+        });
+      });
+
       
-      
+      //Скрипт для плавного скролла по якорям
+    const anchors = document.querySelectorAll('a[href^="#"]')
+
+    for (let anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const blockID = anchor.getAttribute('href');
+        
+        document.querySelector(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    };
+
+    //Скрипт модульно окна
+    const modal = document.querySelector(`.modal`),
+          modalClose = document.querySelector(`.modal__close`),
+          modalLink = document.querySelectorAll(`.modal__link`),
+          modalBlock = document.querySelector(`.modal__block`);
+    
+    modalLink.forEach((item) =>{
+      item.addEventListener(`click`, (e) =>{
+
+        body.classList.add(`overflow`);
+        modal.classList.add(`modal__active`);
+      })
+    });
+
+    modalClose.addEventListener(`click`, () =>{
+      body.classList.remove(`overflow`);
+      modal.classList.remove(`modal__active`);
+    });
+
+    modal.addEventListener(`click`, (e)=>{
+
+      if(!modalBlock.contains(e.target)){
+        body.classList.remove(`overflow`);
+        modal.classList.remove(`modal__active`);
+      }
+    });
 });

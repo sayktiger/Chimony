@@ -36,9 +36,18 @@ a{
 }
 //Блоки
 @import "blocks/header";
+@import "blocks/modal";
 @import "blocks/menu";
+@import "blocks/completics";
+@import "blocks/services";
+@import "blocks/free";
+@import "blocks/main";
 @import "blocks/keys";
+@import "blocks/clients";
+@import "blocks/about";
 @import "blocks/news";
+@import "blocks/project";
+@import "blocks/footer";
 // Адаптив
 @import "media/media-1200px";
 @import "media/media-1024px";

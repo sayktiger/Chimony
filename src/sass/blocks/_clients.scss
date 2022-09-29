@@ -1,0 +1,34 @@
+.clients{
+    padding-bottom: 160px;
+    background-color: #F2F2F2;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text{
+        max-width: 360px;
+    }
+    &__title{
+        font-family: 'Candara';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #120B3F;
+        margin-bottom: 40px;
+    }
+    &__descr{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #120B3F;
+    }
+    &__img{
+        max-width: 760px;
+        max-height: 232px;
+    }
+}

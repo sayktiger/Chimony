@@ -1,0 +1,217 @@
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    opacity: 0;
+    transition: all 0.3s;
+    &__active{
+        opacity: 1;
+        z-index: 15;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba($color: #fff, $alpha: 0.9);
+        width: 100%;
+        height: 100%;
+    }
+    &__block{
+        max-width: 500px;
+        min-width: 300px;
+        width: 500px;
+        background-color: #5F49EA;
+        border-radius: 16px;
+    }
+    &__text{
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    &__title{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        color: #FFFFFF;
+        padding-top: 40px;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    &__close{
+        position: absolute;
+        top:8px;
+        right: 8px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: all 0.3s;
+        svg{
+            stroke: #fff;
+            width: 24px;
+            height: 24px;
+            fill: none;
+        }
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    &__form__wrapper{
+        
+        margin:0 auto;
+        margin-bottom: 24px;
+        justify-content: center;
+        max-width: 300px;
+        label{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 30px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        input{
+            background: #F0F0F0;
+            border: none;
+            border-radius: 8px;
+            width: 300px;
+            height: 60px;
+            padding: 13px 0 13px 24px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 30px;
+            color: #67647D;
+            outline: none;
+            &:not(:last-child){
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &__buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__btn{
+        padding: 9px 18px;
+        background: #fff;
+        border: none;
+        border-radius: 8px;
+        width: 200px;
+        height: 40px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #5F49EA;
+        cursor: pointer;
+        transition: all 0.3s;
+        margin-bottom: 60px;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    &__form__text{
+        max-width: 300px;
+    }
+    &__police{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 22px;
+        color: #fff;
+        max-width: 300px;
+        margin-bottom: 10px;
+        a{
+            color:#fff;
+            display: block;
+            margin-left: 5px;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+   /* для элемента input c type="checkbox" */
+    .custom-checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    /* для элемента label, связанного с .custom-checkbox */
+    .custom-checkbox+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+
+    /* создание в label псевдоэлемента before со следующими стилями */
+    .custom-checkbox+label::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 24px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: none;
+      margin-right: 6px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+      cursor: pointer;
+      background-color: #F0F0F0;
+      border-radius: 4px;
+    }
+
+    /* стили при наведении курсора на checkbox */
+    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+      opacity: 0.8;
+    }
+
+    /* стили для активного чекбокса (при нажатии на него) */
+    .custom-checkbox:not(:disabled):active+label::before {
+      background-image: url("../img/free/free-cheked.png");
+      background-size: 6px 8px;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+
+
+    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    .custom-checkbox:focus:not(:checked)+label::before {
+      opacity: 0.8;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .custom-checkbox:checked+label::before {
+      border:none;
+      background-image: url("../img/svg/free-cheked.svg");
+      background-size: 6px 8px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: background-image 0.3s;
+    }
+
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox:disabled+label::before {
+      background-color: #e9ecef;
+    }
+}

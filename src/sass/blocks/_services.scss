@@ -1,0 +1,105 @@
+.services{
+    padding: 120px 0;
+    background: #5F49EA;
+    &__text{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 82px;
+    }
+    &__title{
+        font-family: 'Candara';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    &__descr{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        color: #FFFFFF;
+        max-width: 760px;
+    }
+
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 1px solid #8674F0;
+        &:not(:last-child){
+            margin-bottom: 60px;
+        }
+    }
+
+    &__left{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:nth-child(1){
+            width: 329px;
+        }
+    }
+    &__img{
+        &:nth-child(1){
+            max-width: 102px;
+
+        }
+    }
+    &__company{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        max-width: 200px;
+        min-width: 200px;
+    }
+    &__rigth{
+        width: 760px;
+        max-width: 760px;
+    }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &:last-child{
+            margin-bottom: 60px;
+        }
+        &:not(:last-child){
+            margin-bottom: 40px;
+        }
+        a { 
+            text-align: left;
+            display: block;
+            width: 300px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: #FFFFFF;
+            position: relative;
+            &:hover{
+                opacity: 0.6;
+            }
+            &:before{
+                content: url('../img/svg/services-arrow.svg');
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -60px;
+                width: 36px;
+                height: 36px;
+                fill: #fff;
+                stroke: #fff;
+            }
+        }
+    }
+}
