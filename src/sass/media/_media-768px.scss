@@ -1,6 +1,7 @@
 @media (max-width:767px) {
     .container{
-        max-width: 576px;
+        max-width: 546px;
+        padding: 0 15px;
     }
     .header{
         &__wrapper{
@@ -13,6 +14,346 @@
     .news{
         &__allnews{
             right: 75px;
+        }
+    }
+    .main{
+        padding: 100px 0 60px 0;
+        &__block{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        &__title{
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+        &__subtitle{
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        &__link{
+            padding: 13px 0;
+        }
+        &__descr{
+            font-size: 18px;
+        }
+        &__card{
+            &:not(:last-child){
+                margin-bottom: 12px;
+            }
+            &:nth-child(3){
+                margin-top: 0;
+            }
+        }
+    }
+    .completics{
+        padding-bottom: 80px;
+        &__title{
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        &__card{
+            &__block{
+                padding: 30px 16px;
+            }
+            &__title{
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+            &__descr{
+                font-size: 14px;
+            }
+            &__link{
+                width: 296px;
+            }
+        }
+    }
+
+    .services{
+        &__title{
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        &__subtitle{
+            font-size: 18px;
+            margin-bottom: 24px;
+        }
+        &__item{
+            flex-direction: column;
+        }
+        &__left{
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &__company{
+            min-width: 0;
+            max-width: 270px;
+            font-size: 18px;
+            width: 100%;
+            margin-left: 12px;
+        }
+        &__img{
+            max-width: 48px;
+        }
+        .services__left:nth-child(1){
+            width: 100%;
+        }
+        .services__img:nth-child(1){
+            max-width: 42px;
+        }
+        &__rigth{
+            max-width: 100%;
+        }
+        &__links{
+            width: 328px;
+            align-items: flex-start;
+            &:not(:last-child){
+                margin-bottom: 16px;
+            }
+            a{
+                max-width: 100%;
+                width: 286px;
+                font-size: 18px;
+                &:not(:last-child){
+                    margin-bottom: 16px;
+                }
+            }
+            
+        }
+    }
+
+    .free{
+        padding: 40px 0;
+        &__title{
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        &__wrapper{
+            input{
+                font-size: 18px;
+                height: 40px;
+                &:not(:last-child){
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        &__police{
+            font-size: 12px;
+        }
+    }
+
+    .keys{
+        padding: 87px 0 80px 0;
+        &__title{
+            font-size: 28px;
+        }
+        &__all{
+            font-size: 10px;
+            width: 160px;
+            padding: 12px 0 12px 43px;
+            &::before{
+                top: 8px;
+                right: 42px;
+            }
+        }
+    }
+
+    .clients{
+        padding-bottom: 80px;
+        &__text{
+            flex-direction: column;
+        }
+        &__title{
+            font-size: 28px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        &__descr{
+            width: 100%;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .about{
+        padding: 80px 0;
+        &__img{
+            width: 328px;
+            height: 149px;
+            margin-bottom: 16px;
+        }
+        &__title{
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+
+        &__descr{
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        &__link{
+            font-size: 10px;
+            width: 160px;
+            padding: 12px 0 12px 43px;
+            &::before{
+                top: 8px;
+                right: 42px;
+            }
+        }
+    }
+    .news{
+        padding: 80px 0 80px 0;
+        &__text{
+            display: flex;
+            flex-direction: column;
+        }
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 39px;
+        }
+        &__subtitle{
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 16px;
+        }
+        &__allnews{
+            position: relative;
+            top: auto;
+            right: auto;
+            padding: 14px 0 12px 34px;
+            font-size: 10px;
+            line-height: 16px;
+            width: 160px;
+            height: 40px;
+            margin-bottom: 52px;
+            &::before{
+                transform: scale(0.8);
+                top: 9px;
+                right: 40px; 
+            }
+        }
+        &__swiper{
+            .swiper-slide{
+                flex-direction: column;
+            }
+            &__img{
+                order: 1;
+                margin-bottom: 17px;
+            }
+            &__text{
+                order: 2;
+            }
+            &__link{
+                margin-bottom: 70px;
+            }
+        }
+        &__swiper-button-next{
+            left: auto;
+            right: 0;
+        }
+        &__swiper-pagination{
+            left: 46% !important;
+        }
+    }
+
+    .project{
+        &__title{
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        &__wrapper{
+            input{
+                font-size: 18px;
+                height: 40px;
+                &:not(:last-child){
+                    margin-bottom: 16px;
+                }
+            }
+            
+        }
+        &__area{
+            textarea{
+                font-size: 18px;
+            }
+        }
+        &__police{
+            font-size: 12px;
+        }
+    }
+
+    .footer{
+        &__logo{
+            max-width: 160px;
+        }
+        &__img{
+            max-width: 108px;
+            max-height: 16px;
+            margin-bottom: 30px;
+            svg{
+                width: 108px;
+                height: 16px;
+            }
+        }
+        &__map{
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        &__police{
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        &__danger{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 10px;
+            line-height: 14px;
+            color: #FFFFFF;
+            margin-bottom: 94px;
+        }
+        &__title{
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        &__item{
+            a{
+                font-size: 14px;
+            }
+            &:not(&:last-child){
+                margin-bottom: 16px;
+            }
+        }
+        &__tel{
+            margin-bottom: 12px;
+            a{
+                font-size: 18px;
+            }
+        }
+        &__email{
+            margin-bottom: 30px;
+            a{
+                font-size: 18px;
+            }
+        }
+        &__container{
+            flex-direction: column;
+            max-width: 304px;
+            margin-bottom: 30px;
+            &:nth-child(1){
+                width: 304px;
+            }
+            &_adress{
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+        &-mobile__company{
+            text-align: left;
+            padding-left: 24px;
+            font-size: 14px;
         }
     }
 }

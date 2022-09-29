@@ -48,4 +48,71 @@
             }
         }
     }
+
+    .completics{
+        &__card{
+            padding: 0 20px;
+        }
+        &__block{
+            max-width: 280px;
+        }
+    }
+
+    .services{
+        &__links{
+            flex-direction: column;
+            align-items: center;
+            a{
+                &:not(:last-child){
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    .free{
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: 300px;
+            }
+        }
+    }
+
+    .clients{
+        &__text{
+            max-width: 330px;
+        }
+        &__img{
+            max-width: 600px;
+        }
+    }
+
+    .about{
+        &__text{
+            max-width: 560px;
+        }
+    }
+
+    .project{
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: 300px;
+            }
+        }
+    }
+
+    .footer{
+        &__logo{
+            max-width: 320px;
+        }
+        &__menu{
+            max-width: 320px;
+        }
+        &__block{
+            max-width: 320px;
+        }
+    }
 }

@@ -1,6 +1,9 @@
 .footer{
     padding: 120px 0 60px 0;
     background: #5F49EA;
+    .footer-mobile__company{
+        display: none;
+    }
     &__wrapper{
         display: flex;
         justify-content: space-between;
