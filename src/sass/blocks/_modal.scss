@@ -166,7 +166,7 @@
     .custom-checkbox+label::before {
       content: '';
       display: inline-block;
-      width: 18px;
+      width: 24px;
       height: 24px;
       flex-shrink: 0;
       flex-grow: 0;
@@ -187,10 +187,10 @@
 
     /* стили для активного чекбокса (при нажатии на него) */
     .custom-checkbox:not(:disabled):active+label::before {
-      background-image: url("../img/free/free-cheked.png");
-      background-size: 6px 8px;
+      background-image: url("../img/free/free-cheked.webp");
+      background-size: 8px 8px;
       background-repeat: no-repeat;
-      background-position: center center;
+      background-position:center;
     }
 
 
@@ -204,10 +204,10 @@
     .custom-checkbox:checked+label::before {
       border:none;
       background-image: url("../img/svg/free-cheked.svg");
-      background-size: 6px 8px;
+      background-size: 7px 8px;
       background-repeat: no-repeat;
       background-position: center center;
-      transition: background-image 0.3s;
+      transition: all 0.3s;
     }
 
     /* стили для чекбокса, находящегося в состоянии disabled */

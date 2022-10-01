@@ -301,4 +301,46 @@
             right: 15%;
         }
     }
+
+    .agent{
+        padding-top: 80px;
+        &__img-dekstop{
+            display: none;
+        }
+        &__img-mobile{
+            display: block;
+        }
+    }
+
+    .help{
+        &__wrapper{
+            width: 100%;
+        }
+        &__card{
+            padding: 30px 16px;
+            min-height: 262px;
+            min-width: 328px;
+        }
+        &__block{
+            min-height: 202px;
+        }
+    }
+
+    .know{
+        &__link{
+            top: 49%;
+        }
+    }
+    .query{
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+        }
+        &__police{
+            font-size: 7px;
+        }
+        &__btn{
+            height: 50px;
+        }
+    }
 }

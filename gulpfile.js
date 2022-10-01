@@ -8,9 +8,9 @@ const imagemin    = require('gulp-imagemin');
 const htmlmin     = require('gulp-htmlmin');
 const svgSprite = require('gulp-svg-sprite');
 const fileinclude = require('gulp-file-include');
-// const imageminWebp = require('imagemin-webp');
-// const imageminw = require('imagemin');
-// const webp = require('gulp-webp');
+const imageminWebp = require('imagemin-webp');
+const imageminw = require('imagemin');
+const webp = require('gulp-webp');
 const svgspriteConfig = {
     shape: {
         dimension: {
@@ -82,6 +82,7 @@ gulp.task('watch', function(){
     gulp.watch("src/img/svgIcons/*").on('all', gulp.parallel('icons'));
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
     gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileinclude`));
+    gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileincludeTwo`));
 });
 
 gulp.task(`html`,function(){
@@ -124,16 +125,16 @@ gulp.task(`svgSprite`, function(){
         .pipe(gulp.dest("dist/img"));
 });
 
-// gulp.task(`webp-min`, ()=>{
-//         imageminw(['src/img/**/*.{jpg,png}'], 'dist/', {
-//         use: [
-//             imageminWebp({quality: 80})
-//         ]
-//     });
-//     return gulp.src('src/**/*.png')
-//         .pipe(webp())
-//         .pipe(gulp.dest('dist/img'))
-// });
+gulp.task(`webp-min`, ()=>{
+        imageminw(['src/img/**/*.{jpg,png}'], 'dist/', {
+        use: [
+            imageminWebp({quality: 80})
+        ]
+    });
+    return gulp.src('src/**/*.png')
+        .pipe(webp())
+        .pipe(gulp.dest('dist/img'))
+});
 gulp.task('fileinclude', function() {
     gulp.src(['src/index.html'])
       .pipe(fileinclude({
@@ -143,4 +144,13 @@ gulp.task('fileinclude', function() {
       .pipe(gulp.dest('./dist'))
   });
 
-gulp.task('default', gulp.parallel('watch','server','fileinclude','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));
+
+  gulp.task('fileincludeTwo', function() {
+    gulp.src(['src/about.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./dist'))
+  });
+gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));

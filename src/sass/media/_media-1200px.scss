@@ -115,4 +115,55 @@
             max-width: 320px;
         }
     }
+
+    .query{
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: 300px;
+            }
+        }
+    }
+
+    .help{
+        &__card{
+            padding: 20px;
+            min-height: auto;
+        }
+        &__block{
+            max-width: 280px;
+        }
+    }
+    .experience{
+        &__block{
+            flex-direction: column;
+            margin-bottom: 0;
+            &__title{
+                max-width: 100%;
+                margin-bottom: 30px;
+            }
+            &__descr{
+                max-width: 100%;
+                &:not(:last-child){
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+
+    .know{
+        position: relative;
+        &__text{
+            flex-direction: column;
+        }
+        &__agent{
+            margin-bottom: 40px;
+        }
+        &__link{
+            position: absolute;
+            top:30%;
+            right: 45px;
+        }
+    }
 }

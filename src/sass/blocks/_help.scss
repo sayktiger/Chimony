@@ -1,0 +1,65 @@
+.help{
+    padding-bottom: 160px;
+    background: #F0F0F0;
+    &__title{
+        font-family: 'Candara';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #120B3F;
+        margin-bottom: 60px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__card{
+        padding: 53px 40px 60px 40px;
+        max-width: 389px;
+        min-height: 405px;
+        background: #FFFFFF;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &__title{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            color: #120B3F;
+        }
+        &__link{
+            width: 200px;
+            height: 40px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: #5F49EA;
+            border-radius: 8px;
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+    }
+    &__block{
+        max-width: 309px;
+        min-height: 292px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
