@@ -83,6 +83,7 @@ gulp.task('watch', function(){
     gulp.watch("src/img/**/*").on('all', gulp.parallel('images'));
     gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileinclude`));
     gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileincludeTwo`));
+    gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileincludeThree`));
 });
 
 gulp.task(`html`,function(){
@@ -153,4 +154,13 @@ gulp.task('fileinclude', function() {
       }))
       .pipe(gulp.dest('./dist'))
   });
-gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));
+
+  gulp.task('fileincludeThree', function() {
+    gulp.src(['src/news.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./dist'))
+  });
+gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','fileincludeThree','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));

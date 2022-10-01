@@ -45,6 +45,29 @@ document.addEventListener(`DOMContentLoaded`, () => {
       }
       });
 
+      const newsSlider = new Swiper('.news-slider__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+          el: '.news-slider__swiper-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.news-slider__swiper-button-next',
+          prevEl: '.news-slider__swiper-button-prev',
+        },
+        spaceBetween: 50,
+        speed: 800,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+      }
+      });
+
       //Меню
       const body = document.querySelector(`body`),
           menu = document.querySelector(`.menu`),

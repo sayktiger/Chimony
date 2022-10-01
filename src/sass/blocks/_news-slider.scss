@@ -1,0 +1,174 @@
+.news-slider{
+    padding: 0 0 160px 0;
+    background-color: #F2F2F2;
+    .container{
+        position: relative;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &__title{
+        font-family: 'Candara';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 62px;
+        text-transform: uppercase;
+        color: #120B3F;
+        margin-bottom: 140px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        &_title{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: #120B3F;
+            margin-bottom: 16px;
+        }
+        &_descr{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #120B3F;
+            max-width: 360px;
+        }
+    }
+    &__img{
+        max-width: 360px;
+        max-height: 260px;
+    }
+    &__allnews{
+        display: block;
+        width: 200px;
+        height: 40px;
+        padding: 9px 0 9px 42px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #5F49EA;
+        border: 1px solid #5F49EA;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        &::before{
+            content: url('../img/svg/arrow-up.svg');
+            position: absolute;
+            top:8px;
+            right: 58px;
+            width: 10px;
+            height: 10px;
+        }
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    
+    &__swiper{
+        position: relative;
+        overflow: hidden;
+        max-width: 760px;
+        .swiper-slide{
+            min-height: 828px;
+            max-width: 760px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &__swiper-pagination{
+        position: absolute;
+        z-index: 5;
+        top: 170px !important;
+        bottom: auto !important;
+        left: 64px !important;
+        max-width: 70px;
+        height: 8px;
+
+    }
+    .swiper-pagination-bullet{
+        width: 8px;
+        height: 8px;
+        background: #D8D8D8;
+        &:not(:last-child){
+            margin-right: 4px;
+            margin-left: 0;
+        }
+    }
+    
+    .swiper-pagination-bullet-active{
+        background: #fff;
+    }
+    &__swiper-button-prev{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #5F49EA;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        position: absolute;
+        top: 154px;
+        bottom: auto;
+        left:0;
+        z-index: 5;
+        transform: rotate(-180deg);
+        &:hover{
+            opacity: 0.6;
+        }
+        svg{
+            width: 24px;
+            height: 24px;
+            width: 24px;
+            height: 24px;
+            stroke:#5F49EA;
+            fill: none;
+        }
+    }
+    &__swiper-button-next{
+        width: 40px;
+        height: 40px;
+        border: 1px solid #5F49EA;
+        border-radius: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        position: absolute;
+        top: 154px;
+        bottom: auto;
+        left:144px;
+        z-index: 5;
+        
+        &:hover{
+            opacity: 0.6;
+        }
+        svg{
+            width: 24px;
+            height: 24px;
+            stroke:#5F49EA;
+            fill: none;
+        }
+    }
+    .swiper-slide-active .slider-buttton {
+        animation: zoomIn 2s;
+    }
+}
