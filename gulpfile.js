@@ -84,6 +84,7 @@ gulp.task('watch', function(){
     gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileinclude`));
     gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileincludeTwo`));
     gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileincludeThree`));
+    gulp.watch("src/block/**.html").on(`all`, gulp.parallel(`fileincludeFour`));
 });
 
 gulp.task(`html`,function(){
@@ -163,4 +164,13 @@ gulp.task('fileinclude', function() {
       }))
       .pipe(gulp.dest('./dist'))
   });
-gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','fileincludeThree','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));
+
+  gulp.task('fileincludeFour', function() {
+    gulp.src(['src/web-service.html'])
+      .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest('./dist'))
+  });
+gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','fileincludeThree','fileincludeFour','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));
