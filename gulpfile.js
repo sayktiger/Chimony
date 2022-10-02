@@ -173,4 +173,4 @@ gulp.task('fileinclude', function() {
       }))
       .pipe(gulp.dest('./dist'))
   });
-gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','fileincludeThree','fileincludeFour','styles',`scripts`,`fonts`,`icons`,`mailer`,`images`,`svgSprite`));
+gulp.task('default', gulp.parallel('watch','server','fileinclude','fileincludeTwo','fileincludeThree','fileincludeFour','styles',`scripts`,`fonts`,`icons`,`webp-min`,`mailer`,`images`,`svgSprite`));
