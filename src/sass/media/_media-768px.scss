@@ -508,4 +508,208 @@
             margin-bottom: 30px;
         }
     }
+
+    .news-title{
+        padding-top: 100px;
+        &__top{
+            margin-bottom: 30px;
+        }
+        &__link{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        &__news{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__author{
+            position: relative;
+            order: 1;
+            margin-bottom: 16px;
+        }
+        &__title{
+            order: 2;
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        &__content{
+            margin-top: 16px;
+            width: 100%;
+            padding: 30px 16px 40px 16px;
+        }
+        &__tag{
+            margin-bottom: 16px;
+            max-width: 300px;
+        }
+        &__tag_text{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        &__tags{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        &__content{
+            &__line{
+                margin-bottom: 33px;
+            }
+            &_text{
+                font-size: 14px;
+                line-height: 20px;
+            }
+            &_title{
+                font-size: 18px;
+                line-height: 24px;
+            }
+            &_link{
+                display: none;
+            }
+        }
+    }
+
+    .news-slider{
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+            max-width: 160px;
+            margin-bottom: 0;
+        }
+        .news__allnews{
+            margin-bottom: 0;
+        }
+        .swiper-slide{
+            margin: 0 auto;
+            max-width: 100%;
+            
+        }
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 328px;
+            &:not(:last-child){
+                margin-bottom: 16px;
+            }
+            &__title{
+                font-size: 18px;
+                line-height: 24px;
+                max-width: 328px;
+            }
+            &_descr{
+                max-width: 328px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        &__img{
+            margin-bottom: 16px;
+        }
+    }
+    .wechat{
+        padding-bottom: 40px;
+        &__top{
+            max-width: 220px;
+            margin-bottom: 16px;
+        }
+        &__link{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        &__news{
+            font-size: 10px;
+            line-height: 14px;
+        }
+        &__descr{
+            position: relative;
+            margin-bottom: 80px;
+            &__img{
+                width: 39px;
+                height: 51px;
+                position: absolute;
+                top:0;
+                left:0;
+            }
+            &__title{
+                font-size: 28px;
+                line-height: 34px;
+                max-width: 280px;
+                padding-left: 50px;
+                margin-bottom: 12px;
+            }
+            &__descr{
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 30px;
+            }
+            &__link{
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+    }
+
+    .wechat__graf{
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+            max-width: 328px;
+            margin-bottom: 40px;
+        }
+        &__descr{
+            font-size: 14px;
+            line-height: 20px;
+            &:not(:last-child){
+                margin-bottom: 8px;
+            }
+        }
+        &__img{
+            max-width: 100%;
+            max-height: 314px;
+            margin-bottom: 80px;
+        }
+    }
+
+    .wechat__do{
+        &__title{
+            font-size: 28px;
+            line-height: 34px;
+            margin-bottom: 40px;
+        }
+        &__number{
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 20px;
+            span{
+                padding: 2px 8px;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        &__descr{
+            font-size: 14px;
+            line-height: 20px;
+            &:not(:last-child){
+                margin-bottom: 8px;
+            }
+        }
+        &__line{
+            margin: 16px 0;
+        }
+        .wechat__do__list__title{
+            display: none;
+        }
+        .wechat__list{
+            display: none;
+        }
+    }
 }

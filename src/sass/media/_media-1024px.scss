@@ -450,4 +450,54 @@
             }
         }
     }
+
+    .news-title{
+        &__news{
+            text-overflow: ellipsis; /* Многоточие */
+            white-space: nowrap; /* Отменяем перенос текста */
+            overflow: hidden; /* Обрезаем содержимое */
+            max-width: 519px;
+        }
+        &__author{
+            right: 0;
+        }
+        &__content{
+            padding: 47px 30px 60px 30px;
+        }
+    }
+
+    .news{
+        &__allnews{
+            top: 10px;
+            left:auto;
+            right: 0;
+        }
+    }
+    .swiper-slide{
+        max-width: 678px;
+    }
+    .news-slider{
+        overflow: hidden;
+        &__text{
+            margin-bottom: 55px;
+        }
+        &__content{
+            max-width: 678px;
+            &__text{
+                max-width: 324px;
+            }
+        }
+        &__img{
+            width: 324px;
+            height: 234px;
+        }
+    }
+
+    .wechat__graf{
+        &__img{
+            max-width: 678px;
+            max-height: 407px;
+        }
+    }
+
 }

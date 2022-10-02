@@ -343,4 +343,20 @@
             height: 50px;
         }
     }
+
+    .news-title{
+        &__news{
+            max-width: 224px;
+        }
+        .news-slider__swiper-pagination {
+            top: auto!important;
+            left: 43%!important;
+            bottom: 16px!important;
+        }
+    }
+    .news-slider{
+        .news__allnews{
+            top: -10px;
+        }
+    }
 }
