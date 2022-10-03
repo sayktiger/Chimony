@@ -166,6 +166,9 @@
         padding: 7px 24px;
         background: #F0F0F0;
         border-radius: 20px;
+        &:hover{
+            opacity: 0.6;
+        }
     }
 
 }

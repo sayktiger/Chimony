@@ -21,7 +21,12 @@
             margin-right: 30px;
         }
         &__mobile{
-            
+            position: relative;
+            margin-right: 20px;
+            transition: all 0.3s;
+            display: block;
+            width: 40px;
+            height: 40px;
             &_search{
                 display: block;
                 width: 40px;
@@ -41,6 +46,38 @@
                     fill: transparent;
                 }
             }
+
+            .input {
+                width: 130px;
+                height: 40px;
+                padding: 12px 0 12px 40px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: #120B3F;
+                text-transform: uppercase;
+                background: #FFFFFF;
+                border: 1px solid #D8D8D8;
+                border-radius: 4px;
+                position: absolute;
+                bottom: -60px;
+                right: 30px;
+                transition: all 0.3s;
+                opacity: 0;
+                z-index: -2;
+                &__active{
+                    z-index: 3;
+                    opacity: 1;
+                    transition: all 0.3s;
+                }
+            }
+            .input:focus {
+                border-color: #120B3F;
+                outline: #120B3F;
+            }
+            
             &_burger{
                 display: flex;
                 flex-direction: column;
@@ -466,13 +503,13 @@
         }
     }
 
-    .news{
-        &__allnews{
-            top: 10px;
-            left:auto;
-            right: 0;
-        }
-    }
+    // .news{
+    //     &__allnews{
+    //         top: 10px;
+    //         left:auto;
+    //         right: 0;
+    //     }
+    // }
     .swiper-slide{
         max-width: 678px;
     }
@@ -492,11 +529,20 @@
             height: 234px;
         }
     }
-
+    .wechat__descr__img{
+        width: 170px;
+        height: auto;
+    }
     .wechat__graf{
         &__img{
             max-width: 678px;
             max-height: 407px;
+        }
+    }
+
+    .know{
+        &__link{
+            top:40%;
         }
     }
 

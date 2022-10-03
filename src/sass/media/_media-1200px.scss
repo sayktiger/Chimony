@@ -1,4 +1,4 @@
-@media (max-width:1200px) {
+@media (max-width:1350px) {
     .container{
         max-width: 992px;
     }
@@ -153,7 +153,9 @@
     }
 
     .know{
-        position: relative;
+        .container{
+            position: relative;
+        }
         &__text{
             flex-direction: column;
         }
@@ -163,7 +165,7 @@
         &__link{
             position: absolute;
             top:30%;
-            right: 45px;
+            right: 0;
         }
     }
 
@@ -215,8 +217,9 @@
 
         &__swiper-pagination{
             top: auto !important;
-            left:46% !important;
+            left:50% !important;
             bottom: 16px !important;
+            transform: translateX(-50%);
         }
     }
     .wechat__descr{
@@ -225,6 +228,7 @@
         }
     }
     .wechat__graf{
+        margin-bottom: 0;
         &__wrapper{
             flex-direction: column;
         }

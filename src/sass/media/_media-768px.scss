@@ -10,6 +10,12 @@
         &__logo{
             margin-right: 10%;
         }
+        .input{
+            &__active{
+                bottom: -55px;
+            }
+        }
+        
     }
     .news{
         &__allnews{

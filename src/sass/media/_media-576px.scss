@@ -12,10 +12,15 @@
         &__logo{
             width: 81px;
             height: 12px;
-            svg{
+            a{
                 width: 81px;
                 height: 12px;
+                svg{
+                    width: 81px;
+                    height: 12px;
+                }
             }
+            
         }
         &__contacts{
             width: 138px;
@@ -36,7 +41,6 @@
 
         &__consulting {
             a{
-                font-size: 10px;
                 font-family: 'Roboto';
                 font-style: normal;
                 font-weight: 400;
@@ -47,14 +51,42 @@
                 color: #5F49EA;
             }
         }
+        &__mobile{
+            width: 30px;
+            height: 30px;
+            max-width: 30px;
+            margin-right: 10px;
+            .input{
+                height: 30px;
+                &__active{
+                    background: #fff;
+                    max-width: 130px;
+                    padding-left: 40px;
+                    bottom: -43px;
+                    right: 10px;
+                    
+                }
+            }
+        }
         &__mobile_search{
             width: 30px;
             height: 30px;
-            margin-right: 8px;
+        }
+        &__mobile__button{
+            width: 30px;
+            height: 30px;
+            max-width: 30px;
+            max-height: 30px;
         }
         &__mobile_burger{
             width: 30px;
             height: 30px;
+            opacity: 1;
+            &_dn{
+                opacity: 0;
+                transition: all 0.2s;
+                display: none;
+            }
             span{
                 width: 16px;
                 &:nth-child(2){
@@ -224,6 +256,7 @@
         &__title{
             width: 100%;
             font-size: 28px;
+            line-height: 40px;
             margin-bottom: 40px;
         }
         &__card{
@@ -345,6 +378,9 @@
     }
 
     .news-title{
+        &__top{
+            max-width: 360px;
+        }
         &__news{
             max-width: 224px;
         }
@@ -358,5 +394,9 @@
         .news__allnews{
             top: -10px;
         }
+    }
+
+    .wechat{
+        padding-top: 100px;
     }
 }

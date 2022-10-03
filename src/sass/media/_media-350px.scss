@@ -1,0 +1,60 @@
+@media (max-width:359px) {
+    body{
+        overflow-x: hidden;
+    }
+    .header{
+        &__mobile{
+            &_burger{
+                width: 40px;
+            }
+        }
+        &__phone{
+            a{
+                font-size: 10px;
+            }
+        }
+        &__consulting{
+            a{
+                font-size: 8px;
+            }
+        }
+        &__logo{
+            width: 66px;
+            a{
+                width: 66px;
+                svg{
+                    width: 66px;
+                }
+            }
+        }
+    }
+    .modal{
+        &__close{
+            top: 4px;
+            right: 19%;
+        }
+    }
+
+    .services__links a:before {
+        right: -20px;
+    }
+
+    .free__police {
+        font-size: 5px;
+    }
+
+    .project__police {
+        font-size: 5px;
+    }
+    .query__police{
+        font-size: 5px;
+    }
+    .news-title__tags{
+        font-size: 8px;
+        padding: 7px 15px; 
+    }
+    .news-slider__img{
+        width: 270px;
+        align-self: flex-start;
+    }
+}

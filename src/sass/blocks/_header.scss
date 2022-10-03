@@ -6,6 +6,7 @@
     right: 0;
     z-index: 10;
     &__mobile{
+        display: none;
         &_search{
             display: none;
         }
@@ -22,10 +23,14 @@
         justify-content: space-around;
     }
     &__logo{
+        width: 162px;
+        height: 24px;
         max-width: 162px;
         max-height: 24px;
         a{
             svg{
+                width: 162px;
+                height: 24px;
                 max-width: 162px;
                 max-height: 24px;
                 fill: #5F49EA;
@@ -156,4 +161,6 @@
             }
         }
     }
+
+    
 }

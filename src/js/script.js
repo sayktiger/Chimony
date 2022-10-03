@@ -135,4 +135,14 @@ document.addEventListener(`DOMContentLoaded`, () => {
         modal.classList.remove(`modal__active`);
       }
     });
+
+    //мобильный поиск
+    const mobileButton = document.querySelector(`.header__mobile_search`),
+      mobileInput = document.querySelector(`.input`);
+
+      mobileButton.addEventListener(`click`, (e) =>{
+        e.preventDefault();
+
+        mobileInput.classList.toggle(`input__active`);
+      });
 });
